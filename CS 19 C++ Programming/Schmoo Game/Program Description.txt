@@ -1,0 +1,28 @@
+BACKGROUND
+This is a new Schmoo game. Schmoos are imaginary creatures who love being splatted with juicy mud balls. You, being a Schmoo lover, try to make Schmoos happy by tossing mud balls at them.1 This program is an exercise in creating a Linked List.
+
+PROGRAM DESCRIPTION
+This program is an exercise in working with a linked list. You may code either a singly or doubly linked list at your preference.
+
+MAIN AND PROGRAM INPUT
+Your program is will read its input from STDIN and write its output to STDOUT. A sample of program input and the resulting output are provided. After you have completed reading the input, your program should print a two line header (name, pengo login, email, etc.), then print the number of Schmoos in the list and then call the list printAll() function. The input file will consist of a list of commands, one per line. There are three different commands, and each will consist of two words followed by two doubles. The commands are "add schmoo", "throw mud", "remove schmoo". You must check for the commands in a case-insensitive manner. The three commands should call your insertFront(), ThrowMudAt(), and RemoveAt() functions respectively. As grading of this program may be automated, pleasy replicate the style and formatting of the sample output.
+
+PROGRAM REQUIREMENTS
+Create a class named Schmoo. Your Schmoo class needs to have two doubles (x and y) which represent the location of the Schmoo (in unspecified units.) Note that x and y can be positive or negative. Your Schmoo class also needs an int (mud), initally 0, that tells you how many times that Schmoo has been hit with mud. (A mud ball will hit a Schmoo if it lands within a distance of 5.0 of the Schmoo.) Your Schmoo must have a toString function that returns the coordinates of the Schmoo as well as the number of times that the Schmoo has been hit with mud (see the provided sample for the required format.) Your Schmoo class must have a Conversion Constructor (from the toString representation) and a Copy Constructor.
+
+CONVERSION CONSTRUCTOR EXAMPLE
+Schmoo s = new Schmoo("Schmoo at (3.00, 4.00) was hit with mud 2 times.");
+Create a Linked List class named SchmooList, and an inner class link node class named Linknode. (This will be a customized Linked List (special features described below) based on the 2 or 3 class Linked List as described in class.)
+
+The SchmooList class (single or doubly linked, at your preference) must support at a minimum, the following functions:
+
+A constructor that initializes the list to empty
+A public function called insertFront that the user calls to insert a Schmoo into the first position in the list.
+A public function named throwMudAt(double, double) that "throws mud at the given x,y coordinates". This function should add one to the mud value of any Schmoo in the list that is within a distance of 5.0 of the given coordinates. (Within 5.0 means that the distance is less than or equal to 5.0)
+A public function named removeAt(double, double) that removes any Scmoo that is within a distance of 1.0 of the given coordinate. Note that it is possible that every Schmoo in the list could be removed with this command.
+getPopulation() returns the number of Schmoos in the list
+printAll() send each Schmoo to STDOUT (one per line.) in list order, starting with the first by using the toString function of the Schmoo.
+Add other member functions as you deem appropriate.
+Remember that list traversals take time—do your best to minimize the number of traversals needed in your functions/program!
+WHAT TO "TURN-IN"
+Since this is a multi-file project, I will collect the directory 20j-5 and all of its contents. This directory should not contain any files not part of your project, nor should it contain any subdirectories. You are required to ensure that only the necessary .java files and your optional readme.txt file are present. You must have a class called "P5" that contains your main() function.

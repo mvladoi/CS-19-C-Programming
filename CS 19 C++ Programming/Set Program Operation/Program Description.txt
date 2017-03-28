@@ -1,0 +1,30 @@
+PROGRAM DESCRIPTION
+Create a class, named IntSet, that implements a set that will store integer values in the range of 0 through 2000, inclusive. (Use a static const for this upper bound, so that the value can be modified, and your program re-compiled, to work with an alternate value.) If you don't remember the basics of sets and set operations, you may find the set entry at Wikipedia helpful. The required member functions are described below—do not modify them without consulting with me first.
+
+You must use the code from the provided class definition and main function. Do not modify the provided code, except where indicated or to add comments, without consulting me and getting permission via email. Don't forget to add all the proper array and object error checking. If you modify the main function or testing purposes while you are developing your program (this is recomended), return it to the provided code before you submit your assignment. Note that when I test your IntegerSet class, I may use another test routine. Make sure that your IntegerSet class conforms exactly to the specification.
+
+Your default constructor must allow between zero and five elements to be inserted into the set initally.
+
+Your member functions insertElement and deleteElement should work by adding (or removing) the specified element to the set.
+
+The toString member function should return a string containing standard set notation (comma seperated list inside curley braces)
+
+example sets:
+{1, 2, 4, 6, 34, 58}
+{1}
+{}
+The member function equals should have an integer set as its parameter and return type bool. It should determine if two sets have exactly the same members.
+
+The swap function swaps all the elements between the set it was invoked on and its parameter.
+
+The intersection, union, and set subtraction functions should be called intersectionWith, unionWith, and subtraction. Both should take one integer set as their parameter and perform the requested operation by modifying the contents of a returned object.
+
+// s1 becomes the union of s2 and s3
+// s2 and s3 are unmodified
+s1 = s2.unionWith(s3);
+The member function hasElement should have return type bool and determine if the parameter is an element of the set. (Illegal element values should also return false.)
+
+See starter file (intset-starter.cpp) for the required class definition and main function.
+
+WHAT TO TURN IN
+For this assignment, you will be creating a project with several files. All of your project files, including your makefile, should be placed in a directory named 19-3 inside your home directory on Pengo. This directory should not contain any files not part of your project, and it should not contain any subdirectories or binaries. I will collect all of the files from this directory.
